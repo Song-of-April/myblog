@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>宋佳芯的博客</title>
+    <title>宋佳芯的个人主页</title>
     <style>
         /* 极简风格 */
         * {
@@ -106,34 +106,86 @@
             margin: 30px 0;
         }
 
-        .post {
-            margin-bottom: 48px;
+        .section-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #222;
+            margin-bottom: 16px;
         }
 
-        .post h2 {
-            font-size: 1.4rem;
+        .hobby-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 40px;
+        }
+
+        .hobby-tag {
+            display: inline-block;
+            font-size: 0.9rem;
+            color: #555;
+            background: #fff;
+            padding: 6px 16px;
+            border-radius: 20px;
+            border: 1px solid #eaeaea;
+            transition: all 0.2s;
+        }
+
+        .hobby-tag:hover {
+            border-color: #0070f3;
+            color: #0070f3;
+        }
+
+        .project-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 20px 24px;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+            margin-bottom: 16px;
+            transition: box-shadow 0.2s;
+        }
+
+        .project-card:hover {
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-card h3 {
+            font-size: 1.1rem;
             font-weight: 600;
             color: #222;
         }
 
-        .post h2 a {
+        .project-card h3 a {
             color: inherit;
             text-decoration: none;
         }
 
-        .post h2 a:hover {
+        .project-card h3 a:hover {
             color: #0070f3;
         }
 
-        .post .meta {
-            font-size: 0.85rem;
-            color: #999;
-            margin-top: 4px;
+        .project-card p {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 6px;
         }
 
-        .post p {
+        .project-card .project-link {
+            display: inline-block;
             margin-top: 10px;
-            color: #555;
+            font-size: 0.85rem;
+            color: #0070f3;
+            text-decoration: none;
+        }
+
+        .project-card .project-link:hover {
+            text-decoration: underline;
+        }
+
+        .coming-soon {
+            font-size: 0.85rem;
+            color: #999;
+            font-style: italic;
         }
 
         footer {
@@ -159,8 +211,8 @@
 <body>
     <div class="container">
         <header>
-            <h1>宋佳芯的博客</h1>
-            <p>记录思考，分享生活</p>
+            <h1>宋佳芯的个人主页</h1>
+            <p>中国科学技术大学 · 计算机科学与技术</p>
         </header>
 
         <!-- 个人简介卡片 -->
@@ -168,7 +220,7 @@
             <div class="avatar">宋</div>
             <div class="info">
                 <h2>宋佳芯</h2>
-                <span class="tag">中国科学技术大学 · 计算机科学与技术</span>
+                <span class="tag">计算机科学与技术</span>
                 <ul>
                     <li>🏸 羽毛球</li>
                     <li>🎻 小提琴</li>
@@ -179,22 +231,34 @@
 
         <hr class="divider">
 
-        <main>
-            <article class="post">
-                <h2><a href="#">Hello World</a></h2>
-                <div class="meta">2026 年 5 月 12 日</div>
-                <p>这是我的第一篇博客文章。欢迎来到我的个人博客，这里将记录我的学习笔记、项目心得和生活感悟。</p>
-            </article>
+        <!-- 兴趣 -->
+        <h2 class="section-title">🎯 兴趣</h2>
+        <div class="hobby-list">
+            <span class="hobby-tag">🎵 二胡</span>
+            <span class="hobby-tag">🏸 羽毛球</span>
+            <span class="hobby-tag">🎻 小提琴</span>
+            <span class="hobby-tag">✈️ 旅行</span>
+            <span class="hobby-tag">🎸 吉他</span>
+        </div>
 
-            <article class="post">
-                <h2><a href="#">关于这个博客</a></h2>
-                <div class="meta">2026 年 5 月 12 日</div>
-                <p>这是我通过 AI 和 Agent 写出的第一个项目，希望我以后能成为计算机大神 🚀</p>
-            </article>
-        </main>
+        <!-- 作品集 -->
+        <h2 class="section-title">💻 作品集</h2>
+
+        <div class="project-card">
+            <h3><a href="https://6a02ee6533245867fcb48381--phenomenal-pithivier-c2007b.netlify.app/"
+                    target="_blank">个人主页</a></h3>
+            <p>我的第一个个人主页项目，使用 AI + Agent 完成。</p>
+            <a class="project-link" href="https://6a02ee6533245867fcb48381--phenomenal-pithivier-c2007b.netlify.app/"
+                target="_blank">查看项目 →</a>
+        </div>
+
+        <div class="project-card">
+            <h3>更多作品</h3>
+            <p class="coming-soon">后续会更新更多作品，敬请期待 ✨</p>
+        </div>
 
         <footer>
-            <p>&copy; 2026 <a href="https://github.com">宋佳芯的博客</a>. Powered by GitHub Pages.</p>
+            <p>&copy; 2026 宋佳芯的个人主页. Powered by GitHub Pages.</p>
         </footer>
     </div>
 </body>
